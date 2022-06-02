@@ -16,13 +16,13 @@ public class Duplicate
         {
             arr[i]=sc.nextInt();
         }
-        Solution s = new Solution();
+        SolutionDuplicate s = new SolutionDuplicate();
         boolean ans=s.containsDuplicate(arr);
         System.out.println(ans);
         sc.close();
     }
 }
-class Solution 
+class SolutionDuplicate
 {
     public boolean containsDuplicate(int[] nums) 
     {

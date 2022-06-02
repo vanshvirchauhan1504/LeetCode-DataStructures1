@@ -16,13 +16,13 @@ public class KadaneAlgo
         {
             arr[i]=sc.nextInt();
         }
-        Solution s = new Solution();
+        SolutionKadaneAlgo s = new SolutionKadaneAlgo();
         int ans=s.maxSubArray(arr);
         System.out.println(ans);
         sc.close();
     }
 }
-class Solution 
+class SolutionKadaneAlgo
 {
      public int maxSubArray(int[] nums) 
     {
