@@ -1,5 +1,5 @@
-import java.util.*;;
-public class Duplicate
+import java.util.Scanner;
+public class KadaneAlgo 
 {
     public static void main(String args[])
     {
@@ -17,27 +17,30 @@ public class Duplicate
             arr[i]=sc.nextInt();
         }
         Solution s = new Solution();
-        boolean ans=s.containsDuplicate(arr);
+        int ans=s.maxSubArray(arr);
         System.out.println(ans);
         sc.close();
     }
 }
 class Solution 
 {
-    public boolean containsDuplicate(int[] nums) 
+     public int maxSubArray(int[] nums) 
     {
-        if((nums== null)||(nums.length==0)) 
+        int currSum=0;
+        int maxSum=nums[0];
+       
+        for(int i=0;i<nums.length;i++) 
         {
-            return false;
+           currSum=currSum+nums[i];
+           if(currSum>maxSum) 
+            {
+                maxSum=currSum;
+            } 
+            if(currSum<0)
+            {
+               currSum=0;  
+            }
         }
-        Arrays.sort(nums);
-        for(int i=1;i<nums.length;i++) 
-        {
-           if(nums[i-1]==nums[i]) 
-           {
-              return true;
-           }
-        }
-        return false;
-     }
+        return maxSum;
+    }
 }
