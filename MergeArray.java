@@ -46,5 +46,6 @@ class SolutionMergeArray
         Arrays.sort(nums1);
         System.out.println("Merged and sorted array : ");
         System.out.println(Arrays.toString(nums1));
+        
     }
 }
